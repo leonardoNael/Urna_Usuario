@@ -7,7 +7,7 @@ create table tbCandidatos (
 );
 
 create table tbVotos (
-	cd_voto int (4) auto_increment primary key,
+	cpf numeric (11) primary key,
     num int (2) null
 );
 
