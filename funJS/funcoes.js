@@ -1,5 +1,4 @@
-
-function entrar(n){
+function entrar(){
     var cpf = document.getElementById("cpf").value;
     var cse = [];
     var num = 0;
@@ -53,6 +52,8 @@ function limpar(){
     v1.value = "";
     v2.value = "";
     document.getElementById("img").src = "img/branco.png";
+    var texto = "";
+    document.getElementById("nomeCan").innerHTML = texto;
 }
 
 function branco(){
@@ -66,19 +67,22 @@ function branco(){
 function um(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 1 : (v2.value != "" ? v2.value : (v1.value != "" ? v2.value = 1 : v2.value));
+    v1.value == "" ? v1.value = 1 : v2.value == "" ? v2.value = 1 : 0;
 }
 
 function dois(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 2 : (v1.value != "" ? (v2.value = 2, document.getElementById("img").src = "img/bolso.jpg") : v2.value);
+    var texto = "Jair Messias Bolsonaro";
+    v1.value == "" ? v1.value = 2 : v2.value == "" ? (v2.value = 2, v1.value == 2 && v2.value == 2 ? (document.getElementById("img").src = "img/bolso.jpg", document.getElementById("nomeCan").innerHTML = texto) : 0) : 0;
+
 }
 
 function tres(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 3 : (v1.value != "" ? (v2.value = 3, document.getElementById("img").src = "img/lula.jpg") : v2.value);
+    var texto = "Luiz Inácio Lula da Silva";
+    v1.value == "" ? v1.value = 3 : v2.value == "" ? (v2.value = 3, v1.value == 1 && v2.value == 3 ? (document.getElementById("img").src = "img/lula.jpg", document.getElementById("nomeCan").innerHTML = texto) : 0) :0;
 
     
 }
@@ -86,41 +90,41 @@ function tres(){
 function quatro(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 4 : (v2.value != "" ? v2.value : (v1.value != "" ? v2.value = 4 : v2.value));
+    v1.value == "" ? v1.value = 4 : v2.value == "" ? v2.value = 4 : 0;
 }
 
 function cinco(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 5 : (v2.value != "" ? v2.value : (v1.value != "" ? v2.value = 5 : v2.value));
+    v1.value == "" ? v1.value = 5 : v2.value == "" ? v2.value = 5 : 0;
 }
 
 function seis(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 6 : (v2.value != "" ? v2.value : (v1.value != "" ? v2.value = 6 : v2.value));
+    v1.value == "" ? v1.value = 6 : v2.value == "" ? v2.value = 6 : 0;
 }
 
 function sete(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 7 : (v2.value != "" ? v2.value : (v1.value != "" ? v2.value = 7 : v2.value));
+    v1.value == "" ? v1.value = 7 : v2.value == "" ? v2.value = 7 : 0;
 }
 
 function oito(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 8 : (v2.value != "" ? v2.value : (v1.value != "" ? v2.value = 8 : v2.value));
+    v1.value == "" ? v1.value = 8 : v2.value == "" ? v2.value = 8 : 0;
 }
 
 function nove(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 9 : (v2.value != "" ? v2.value : (v1.value != "" ? v2.value = 9 : v2.value));
+    v1.value == "" ? v1.value = 9 : v2.value == "" ? v2.value = 9 : 0;
 }
 
 function zero(){
     var v1 = document.getElementById("txtV1");
     var v2 = document.getElementById("txtV2");
-    v1.value == "" ? v1.value = 0 : (v2.value != "" ? v2.value : (v1.value != "" ? v2.value = 0 : v2.value));
+    v1.value == "" ? v1.value = 0 : v2.value == "" ? v2.value = 0 : 0;
 }

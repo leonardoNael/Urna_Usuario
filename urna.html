@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="js/java.js"></script>
+    <script type="text/javascript" src="funJS/funcoes.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Eleição</title>
 </head>
@@ -12,13 +12,22 @@
     <form action="urna.php" method="post">
         <table border="">
             <tr>
-                <th colspan="4">
-                    <input type="text" id="cpfV" disabled />
+                <th colspan="12">
+                    <input type="text" id="cpfV" name="cpfV" />
                 </th>
             </tr>
             <tr>
-                <th rowspan="4" colspan="1">
+                <td colspan="4">
+                    SEU VOTO PARA
+                </td>
+                <th rowspan="5" colspan="2">
+                    <img src="img/branco.png" id="" width="15"/>
+                </th>
+                <th rowspan="5" colspan="1">
                     <img src="img/branco.png" id="img" width="150" height="190"/>
+                </th>
+                <th rowspan="5" colspan="2">
+                    <img src="img/branco.png" id="" width="15"/>
                 </th>
                 <th id="um" onclick="um()">
                     1
@@ -31,6 +40,9 @@
                 </th>
             </tr>
             <tr>
+                <th colspan="4">
+                    <img src="img/branco.png" id="" width="250" height="10"/>
+                </th>
                 <th id="quatro" onclick="quatro()">
                     4
                 </th>
@@ -42,6 +54,9 @@
                 </th>
             </tr>
             <tr>
+                <th colspan="4">
+                    PRESIDENTE
+                </th>
                 <th id="sete" onclick="sete()">
                     7
                 </th>
@@ -53,6 +68,9 @@
                 </th>
             </tr>
             <tr>
+                <th colspan="4">
+                    &nbsp;
+                </th>
                 <th colspan="1">
 
                 </th>
@@ -64,7 +82,7 @@
                 </th>
             </tr>
             <tr>
-                <th>
+                <th colspan="4">
                     <input type="text" name="txtV1" id="txtV1" size="2"/>
                     <input type="text" name="txtV2" id="txtV2" size="2"/>
                 </th>
@@ -79,6 +97,13 @@
                     <input type="submit" value="Confirma" />
                 </th>
             </tr>
+            <tr>
+                <th colspan="8">
+                    <label id="nomeCan">
+
+                    </label>
+                </th>
+            </tr>  
         </table>
     </form>
 </body>
