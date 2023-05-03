@@ -1,0 +1,219 @@
+body {
+    font-family: monospace;
+    background-color: #f8f8f8;
+}
+  
+.burn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.tb {
+    margin: 50px auto;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.num{
+    text-align: left;
+}
+  
+.tb td,
+.tb th {
+    padding: 10px;
+
+  }
+  
+.tb th {
+    font-size: 20px;
+}
+  
+.tb .cpf input[type="text"] {
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+  
+.tb tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.tb .t1,
+.tb .t2 {
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+}
+  
+.tb #nomeCan {
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.burn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.cpf, .t1, .t2{
+    text-align: center;
+}
+
+.cpfV{
+    font-family: monospace;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-control {
+    width: 95%;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0px 0px 5px rgba(102, 175, 233, 0.5);
+}
+
+.branco {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    color: black;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 16.5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    font-family: monospace;
+}
+    
+.branco:hover {
+    background-color: #f1f1f1;
+    border: 2px solid #f1f1f1;
+    color: black;
+}
+
+.corrige {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    font-family: monospace;
+}
+    
+.corrige:hover {
+    background-color: darkorange;
+}
+
+.confirma {
+    display: block;
+    width: 91%;
+    height: 50px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    font-family: monospace;
+}
+    
+.confirma:hover {
+    background-color: #3e8e41;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #696969;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: monospace;
+}
+
+.btn-submit:hover {
+background-color: #4b4b4b;
+}
+
+.btnum{
+    display: block;
+    width: 100%;
+    height: 55px;
+    background-color: #222222;
+    color: #fff;
+    border: 2px solid #222222;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    font-family: helvetica;
+}
+
+.btnuma{
+    display: block;
+    width: 91%;
+    height: 55px;
+    background-color: #222222;
+    color: #fff;
+    border: 2px solid #222222;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    font-family: helvetica;
+}

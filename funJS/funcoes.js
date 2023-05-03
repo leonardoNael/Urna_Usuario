@@ -1,3 +1,8 @@
+document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault(); // previne o comportamento padrão do formulário
+    entrar(); // chama a função "entrar()"
+});
+
 function entrar(){
     var cpf = document.getElementById("cpf").value;
     var cse = [];
