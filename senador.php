@@ -2,10 +2,9 @@
     $servername = "localhost:3306";
     $username = "root";
     $password = "123456";
-    $dbname = "testeVotos";
-    $voto = $_POST['txtV1'] . $_POST['txtV2'];
+    $dbname = "dbUrna";
+    $voto = $_POST['txtV1'] . $_POST['txtV2'] . $_POST['txtV3'];
     $cpf = $_POST['cpfV'];
-    $imgs = ['img/lula.jpg'];
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     
@@ -14,24 +13,24 @@
         die("Conexão falhou: " . $conn->connect_error);
     }
 
-    $vcpf = "SELECT * FROM tbVotos WHERE cpf = '$cpf'";
+    $vcpf = "SELECT * FROM tbSenador WHERE cpf = '$cpf'";
     $resCpf = mysqli_query($conn, $vcpf);
     if(mysqli_num_rows($resCpf) < 1){
         if($voto == "")
         {
-            $sql = "INSERT INTO tbVotos (cpf, num) VALUES ('$cpf', NULL)";
+            $sql = "INSERT INTO tbSenador (cpf, num) VALUES ('$cpf', NULL)";
             mysqli_query($conn, $sql);
             mysqli_close($conn);
-            echo "<meta http-equiv='refresh' content='0;url=index.html'>";
+            header("Location: governador.html?cpf=" . urlencode($cpf));
         } else {
-            $sql1 = "SELECT * FROM tbCandidatos WHERE cd_can = '$voto'";
+            $sql1 = "SELECT * FROM tbCanSen WHERE cd_can = '$voto'";
             $res = mysqli_query($conn, $sql1);
             if(mysqli_num_rows($res) === 1){
-                $sql = "INSERT INTO tbVotos (cpf, num) VALUES ('$cpf', '$voto')";
+                $sql = "INSERT INTO tbSenador (cpf, num) VALUES ('$cpf', '$voto')";
                 mysqli_query($conn, $sql);
-                echo "<meta http-equiv='refresh' content='0;url=index.html'>";
+                header("Location: governador.html?cpf=" . urlencode($cpf));
             } else {
-                echo "<meta http-equiv='refresh' content='0;url=index.html'>";
+                header("Location: governador.html?cpf=" . urlencode($cpf));
             }
             mysqli_close($conn);
         } 

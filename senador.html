@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="funJS/funcoes.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" href="img/icone.jpg" type="image/x-icon">
+    <title>Eleições SP - Senador</title>
+</head>
+<body class="burn" onload="cpfVer()" >
+    <form action="senador.php" method="post">
+        <div class="urna">
+            <div class="parte">
+                <div class="tela">
+                    <div class="item">
+                        SEU CPF:
+                    </div>
+                    <div class="item">
+                        <div class="cpf">
+                            <input type="text" id="cpfV" name="cpfV" size="8" onclick="clickcpf()" readonly />
+                        </div>
+                    </div>
+                    <div class="item">
+                        SEU VOTO PARA:
+                    </div>
+                    <div class="item">
+                        <div class="cpf">
+                            SENADOR
+                        </div>
+                    </div>
+                    <div class="item">
+                        NÚMERO:
+                    </div>
+                    <div class="item">
+                        <div class="voto">
+                            <input type="text" name="txtV1" id="txtV1" size="1" class="t1" readonly />
+                            <input type="text" name="txtV2" id="txtV2" size="1" class="t2" readonly />
+                            <input type="text" name="txtV3" id="txtV3" size="1" class="t3" readonly />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgC">
+                            <img src="img/usu.png" id="img" width="220" height="290"/>
+                        </div>
+                        
+                    </div>
+                    <div class="item">
+                        <div class="nCan">
+                            <label id="nomeCan" class="nomeCan">
+            
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parte">
+                <div class="plastico">
+                    <div class="logo">
+                        <img src="img/logo.jpeg" id="" class="imgL"/>
+                    </div>
+                    <div class="nums">
+                        <input type="button" class="btnum" onclick="umS()" value="1" id="btn" />
+                        <input type="button" class="btnum" onclick="doisS()" value="2" id="btn" />
+                        <input type="button" class="btnum" onclick="tresS()" value="3" id="btn" />
+                        <input type="button" class="btnum" onclick="quatroS()" value="4" id="btn" />
+                        <input type="button" class="btnum" onclick="cincoS()" value="5" id="btn" />
+                        <input type="button" class="btnum" onclick="seisS()" value="6" id="btn" />
+                        <input type="button" class="btnum" onclick="seteS()" value="7" id="btn" />
+                        <input type="button" class="btnum" onclick="oitoS()" value="8" id="btn" />
+                        <input type="button" class="btnum" onclick="noveS()" value="9" id="btn" />
+                        <div class="esp">
+                        </div>
+                        <input type="button" class="btnum" onclick="zeroS()" value="0" id="btn" />
+                        <div class="esp">
+                        </div>
+                        <input type="button" class="branco" onclick="branco()" value="Branco" id="btn" />
+                        <input type="button" class="corrige" onclick="limpar()" value="Corrige" id="btn" />
+                        <input type="submit" class="confirma" value="Confirma" id="btn" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

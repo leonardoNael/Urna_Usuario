@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consulta de Dados</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Consulta de Votos</h1>
+
+    <div class="filtro">
+      <label>Tipo de Candidatos:</label>
+      <select id="opcCand">
+        <option disabled selected>Escolha...</option>
+        <option value="sen">Senador</option>
+        <option value="gov">Governador</option>
+        <option value="pres">Presidente</option>
+      </select>
+    </div>
+
+    <div class="filtro">
+        <label>
+          <input type="radio" name="filter" value="all" checked>
+          Mostrar tudo
+        </label>
+      
+        <label>
+          <input type="radio" name="filter" value="input">
+          Filtrar por candidato
+        </label>
+      </div>
+
+    <div class="busca">
+        <label for="data">Número do Candidato:</label>
+        <input type="text" id="data" placeholder="Digite o número...">
+        <button id="search-btn">Buscar</button>
+      </div>
+    </div>
+</body>
+</html>

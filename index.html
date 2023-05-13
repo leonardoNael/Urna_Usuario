@@ -1,23 +1,6 @@
-<!--<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <script type="text/javascript" src="js/java.js"></script>
-</head>
-<body>
-    <h2> Validação </h2>
-	<form method="get">
-		<label for="nome">Digite seu cpf:</label>
-		<input id="cpf" type="text" placeholder="Use apenas números..." name="cpf" size="16" />
-        <input onclick="entrar()" type="button" value="Entrar" />
-    </form>
-</body>
-</html>-->
-
-
+<!--Só vi que era pra ter integração CRUD quando fui entregar, famoso vacilo 
+  (e ter ficado doente quando teve o aviso na sala), mas C e R tem, só faltou 
+  o U e o D. A funcionalidade do que tem pronto eu garanto :p-->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -25,17 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" src="funJS/funcoes.js"></script>
-    <title>Início</title>
+    <link rel="icon" href="img/icone.jpg" type="image/x-icon">
+    <title>Eleições SP - Início</title>
   </head>
-  <body class="bini">
+  <body>
     <div class="container">
       <h1>Validação</h1>
       <form method="get" id="formulario">
         <div class="form-group">
           <label for="input-dados" class="form-label">Digite seu cpf:</label>
-          <input id="cpf" type="number" class="form-control" placeholder="Use apenas números..." name="cpf" size="16" onkeypress="verificarEnter(event)" />
+          <input oninput="maxInput(event, 11)" id="cpf" type="number" class="form-control" placeholder="Use apenas números..." name="cpf" size="11"/>
+          <script>
+            function maxInput(event, maxLength) {
+              const input = event.target;
+              const value = input.value;
+              if (value.length > maxLength) {
+                input.value = value.slice(0, maxLength);
+              }
+            }
+            </script>
         </div>
         <input onclick="entrar()" type="button" class="btn-submit" value="Entrar" />
+        <script>
+          document.getElementById("formulario").addEventListener("submit", function(event) { event.preventDefault(); entrar(); });      
+        </script>
       </form>
     </div>
   </body>
